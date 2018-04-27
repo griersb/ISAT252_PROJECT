@@ -192,14 +192,11 @@ def main():
                     pass
 
             guessed_letters.append(player_guess)
-
-            #for letter in range(len(chosen_word)):
-                #if player_guess == chosen_word[letter]:
-                    #word_guessed[letter] = player_guess 
-            for idx, leter in enumerate(chosen_word):
-                if player_guess == letter:
-                    word_guess[idx] = player_guess
-
+ 
+            for letter in range(len(chosen_word)):
+                if player_guess == chosen_word[letter]:
+                    word_guessed[letter] = player_guess 
+                    
             if player_guess not in chosen_word:
                 attempts -= 1
                 print(HANGMAN[(len(HANGMAN) - 1) - attempts])
